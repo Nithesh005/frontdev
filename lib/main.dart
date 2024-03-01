@@ -5,31 +5,46 @@ void main() {
 }
 
 class Mathan extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hello mathan 1'),
+          title: const Text('Hello mathan 1'),
         ),
         body: Center(
-          child: Row(
-            children: [
-              Text(
-                "Helloo world !!",
-                textAlign: TextAlign.center,
-              ),
-              Text("data "),
-              Text("data -2")
-            ],
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                children: [
+                  Image.asset('./assets/Nithi.jpg')
+                ],
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text("Welcom to Great Kari")],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Submit"),
+                  )
+                ],
+              ),
+            ],
           ),
         ),
         bottomNavigationBar: BottomAppBar(
-          color: Color.fromARGB(255, 255, 13, 13),
+          color: Color.fromARGB(255, 255, 13, 255),
+          height: 75,
           child: Row(
             children: [
               IconButton(
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 onPressed: () {
                   //helo
                 },
@@ -37,17 +52,16 @@ class Mathan extends StatelessWidget {
               ),
             ],
           ),
-          height: 75,
         ),
         drawer: Drawer(
           child: ListView(
             children: [
-              const DrawerHeader(
+              DrawerHeader(
                 child: Text(
                   "Drawer1",
                   style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30),
                 ),
-                decoration: BoxDecoration(color: Colors.amber),
+                decoration: BoxDecoration(color: Colors.pink),
               ),
             ],
           ),
