@@ -13,25 +13,43 @@ class Mathan extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Hello mathan 1'),
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                child: Text(
+                  "CodeFlink",
+                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30),
+                ),
+                decoration: BoxDecoration(color: Colors.orange),
+              ),
+            ],
+          ),
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset('./assets/Nithi.jpg')
+                  CircleAvatar(
+                    backgroundColor: Colors.amber,
+                    radius: 50,
+                    backgroundImage: AssetImage('./assets/CodeFlinkLogo.png'),
+                  ),
                 ],
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text("Welcom to Great Kari")],
+                children: [Text("Welcom to CodeFlink")],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
-                      onPressed: () {},
-                      child: Text("Submit"),
+                    onPressed: () {},
+                    child: Text("Submit"),
                   )
                 ],
               ),
@@ -39,7 +57,7 @@ class Mathan extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomAppBar(
-          color: Color.fromARGB(255, 255, 13, 255),
+          color: Colors.orange,
           height: 75,
           child: Row(
             children: [
@@ -49,19 +67,6 @@ class Mathan extends StatelessWidget {
                   //helo
                 },
                 color: Colors.white,
-              ),
-            ],
-          ),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              DrawerHeader(
-                child: Text(
-                  "Drawer1",
-                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30),
-                ),
-                decoration: BoxDecoration(color: Colors.pink),
               ),
             ],
           ),
