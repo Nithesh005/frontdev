@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Mathan());
+  runApp(Mathan1());
 }
 
-class Mathan extends StatelessWidget {
+class Mathan1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
