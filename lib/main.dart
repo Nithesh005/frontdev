@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Mathan());
+  runApp(Mathan1());
 }
 
-class Mathan extends StatelessWidget {
+class Mathan1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +19,12 @@ class Mathan extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Image.asset('./assets/Nithi.jpg')
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(500),
+                    child: Image.asset(
+                      './assets/Nithi.jpg',
+                    ),
+                  ),
                 ],
               ),
               const Row(
