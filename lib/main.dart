@@ -105,20 +105,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _textFieldValue = '';
+  String Message = 'Hello, Flutter!';
 
-  void _onTextChanged(String value) {
+  void click() {
     setState(() {
-      _textFieldValue = value;
+      Message = "Clicked";
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    String _textFieldValue = '';
+
     int a = 5;
     int b = 6;
-    int c = a + b;
-    var message = 'Hello, Flutter!';
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Welcome'),
@@ -149,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -165,12 +166,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Welcom to CodeFlink'),
-                Text(
-                  'c = c',
-                  style: TextStyle(fontSize: 24),
-                )
+              children: <Widget>[
+                Text(Message),
+                // Text('$a')
               ],
             ),
             // Row(
@@ -181,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: null,
+                  onPressed: click,
                   child: Text("Submit"),
                 )
               ],
@@ -226,3 +224,30 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+// class Home extends StatefulWidget {
+//   const Home({super.key});
+//   @override
+//   State<Home> createState() => _HomeState();
+// }
+//
+// class _HomeState extends State<Home> {
+//   String Value = "HEllOOO";
+//
+//   void Onclick() {
+//     setState(() {
+//       Value = "Welcome";
+//     });
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         home: Column(
+//       children: [
+//         SafeArea(child: Text(Value)),
+//         ElevatedButton(onPressed: Onclick, child: Icon(Icons.home))
+//       ],
+//     ));
+//   }
+// }
